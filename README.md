@@ -1,7 +1,7 @@
-# Amazon Clone System (LLD Exercise)
+# Amazon Clone System
 
 This project implements a simplified Amazon-like ordering system using TypeScript.
-The goal was to design a clean Low-Level Design (LLD) with proper separation of
+The goal was to design a clean Low-Level Design with proper separation of
 models, business logic, and API controllers.
 
 The system supports:
