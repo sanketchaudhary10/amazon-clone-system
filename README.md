@@ -204,6 +204,7 @@ Replace Maps with:
 ---
 
 ## Folder Structure
+```
 amazon-clone-system
 src
 ├─ api
@@ -214,7 +215,7 @@ src
 ├─ db
 │  └─ models.ts
 └─ ui
-
+```
 ---
 
 ## Notes
