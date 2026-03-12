@@ -1,0 +1,70 @@
+openapi: 3.0.1
+
+info:
+  title: Amazon Clone API
+  version: 1.0.0
+
+paths:
+
+  /books:
+    post:
+      summary: Add book to inventory
+      operationId: addBooks
+      x-amazon-apigateway-integration:
+        type: aws_proxy
+        httpMethod: POST
+        uri: ${addBooksLambdaArn}
+      requestBody:
+        required: true
+      responses:
+        "200":
+          description: Book added
+
+
+  /cart:
+    post:
+      summary: Add book to cart
+      operationId: addToCart
+      x-amazon-apigateway-integration:
+        type: aws_proxy
+        httpMethod: POST
+        uri: ${addToCartLambdaArn}
+      requestBody:
+        required: true
+      responses:
+        "200":
+          description: Added to cart
+
+
+  /orders:
+    post:
+      summary: Place order
+      operationId: placeOrder
+      x-amazon-apigateway-integration:
+        type: aws_proxy
+        httpMethod: POST
+        uri: ${placeOrderLambdaArn}
+      requestBody:
+        required: true
+      responses:
+        "200":
+          description: Order placed
+
+
+  /orders/{orderID}/cancel:
+    patch:
+      summary: Cancel order
+      operationId: cancelOrder
+      parameters:
+        - name: orderID
+          in: path
+          required: true
+          schema:
+            type: string
+      x-amazon-apigateway-integration:
+        type: aws_proxy
+        httpMethod: POST
+        uri: ${cancelOrderLambdaArn}
+      responses:
+        "200":
+          description: Order canceled
