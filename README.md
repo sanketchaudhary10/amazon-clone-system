@@ -205,14 +205,14 @@ Replace Maps with:
 
 ## Folder Structure
 amazon-clone-system
-└─ src
+src
 ├─ api
-│ └─ src
-│ ├─ controllers
-│ ├─ logic
-│ └─ infra
+│  └─ src
+│     ├─ controllers
+│     ├─ logic
+│     └─ infra
 ├─ db
-│ └─ models.ts
+│  └─ models.ts
 └─ ui
 
 ---
